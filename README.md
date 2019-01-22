@@ -1,5 +1,5 @@
 # Portfolio
 
-### Made using Bootstrap Studio
+### Made using Bootstrap
 
 [link](https://adisakshya.github.io/)

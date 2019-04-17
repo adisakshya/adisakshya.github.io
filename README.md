@@ -4,4 +4,4 @@
 
 [Adisakshya Chauhan](https://adisakshya.github.io/)
 
-- Blog comming soon... :)
+- Skill page and blog comming soon... :)

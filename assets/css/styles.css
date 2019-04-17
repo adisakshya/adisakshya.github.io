@@ -141,3 +141,7 @@ a:hover {
   cursor:pointer;
 }
 
+.navig-item:hover {
+  font-size:20px;
+  cursor:pointer;
+}

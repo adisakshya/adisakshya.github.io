@@ -4,54 +4,87 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adisakshya Chauhan</title>
+    <title>Adisakshya Chauhan | Home</title>
     <link rel="icon" href="/assets/img/site-icon.jpg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+Sans">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/nav-bar.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
 </head>
 
-<body><div class="main-container container-fluid">
-    
+<body><div class="center-container container-fluid">
 <nav class="navbar navbar-light navbar-expand-md navigation-clean">
-    <div class="container"><a href="/index" class="navbar-brand">adisakshya</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse"
-            id="navcol-1">
+    <div class="container">
+        <a href="/index" class="navbar-brand">adisakshya</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav ml-auto">
                 <li role="presentation" class="navig-item"><a href="/about" class="nav-link">About</a></li>
-                <li role="presentation" class="navig-item"><a href="/projects" class="nav-link">Projects</a></li>
+                <li role="presentation" class="navig-item"><a href="/myworks" class="nav-link">Work</a></li>
+                <li role="presentation" class="navig-item"><a href="/contact" class="nav-link">Contact</a></li>
                 <li role="presentation" class="navig-item"><a href="/docs/Resume.pdf" class="nav-link">Resume</a></li>
             </ul>
         </div>
     </div>
 </nav>
     
-<div id="my-pic" >
-    <img class ="my-pic" src="https://avatars1.githubusercontent.com/u/45028982?s=400&u=0da9e986637cd28f04f2d7e611424e192545107d&v=4"/>    
+<div id="my-pic">
+    <img class="my-pic" src="assets/img/0.jpg">    
 </div>
 
 <div class="welcome">    
-    <h1>adisakshya</h1><br/>
-        <p>I'm <b>Adisakshya Chauhan</b>. Welcome to my space.</p>
+    			<div class="caption v-middle text-center intro">
+					<h1 class="cd-headline clip">
+			            <span class="blc">I'm</span>
+			            <span class="cd-words-wrapper">
+			              <b class="is-visible">Student</b>
+			              <b>Developer</b>
+                          <b>Designer</b>
+			              <b>Creative</b>
+                          <b>Adisakshya</b>
+			            </span>
+	          		</h1>
+				</div>
+        <p>Welcome to my space !</p>
 </div>
 <div class="btn-group-container">        
     <a href="/about"><button class="my-button" type="button"><b>About</b></button></a>
-    <a href="/projects"><button class="my-button" type="button"><b>Projects</b></button></a>
+    <a href="/myworks"><button class="my-button" type="button"><b>Work</b></button></a>
     <a href="/docs/Resume.pdf"><button class="my-button" type="button"><b>Resume</b></button></a>
 </div>
-    <div class="author-soc-container">
+    <div class="author-soc-container" style="padding-top:0px; padding-bottom:0px;">
             <a href="https://github.com/adisakshya"><img src="assets/img/github.png" class="soc-icon" alt="GitHub"></a>
             <a href="https://www.linkedin.com/in/adisakshya-chauhan-a62920151/"><img src="assets/img/linkedin.png" class="soc-icon" alt="LinkedIn"></a>
+            <a href="mailto:adisakshya98@gmail.com"><img src="assets/img/gmail-icon.png" class="soc-icon" alt="LinkedIn"></a>
             <a href="/"><img src="assets/img/facebook.png" class="soc-icon" alt="Facebook"></a>
+            <img src="assets/img/mobile_icon.jpg" class="soc-icon mob-modal" alt="Mobile_Site" data-toggle="modal" data-target="#myModal">
         </div>
 </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-</body>
 
+<div class="container">
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Scan to open in mobile devices.</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body" style="text-align:center;">
+            <img src="assets/img/qrcode.jpeg" style="height:100%; width:80%;"/>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
 </html>

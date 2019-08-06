@@ -1,18 +1,4 @@
 /*-------------------------------------------------------------------/*
-Template name : PerStar
-Version    : 1.0.0
-Author     : xdesky
-Last change: 2018/05/06
-/*-------------------------------------------------------------------
-[Color codes]
-    Background:   #030408
-    Body Color :  #666666
-    Accent color: #030408
-[Typography]
-    Body:           14px Roboto, sans-serif;
-    Heading:        Poppins, sans-serif;
-    Small Heading:  Playfair Display, serif;
-
 [Table of contents]
 
     1. COMMON STYLES
@@ -279,6 +265,17 @@ ol ul {
 }
 .sidebar-left .nav li:first-child span {
   display: none;
+}
+.modal-head {
+  border-bottom: none;
+}
+.modal-qrcode {
+  text-align: center;
+  border-bottom: none;
+}
+.modal-qrcode img {
+  height: 100%;
+  width: 80%;
 }
 /*-------------------
 3. VCARD
@@ -1335,6 +1332,16 @@ ol ul {
 }
 .contact-info ul li {
   color: #fff;
+}
+.form-btn {
+  background-color: #272727;
+  color: #FFFFFF;
+}
+.form-label {
+  font-size: 18px;
+}
+.modal-body div {
+  padding-top: 10px;
 }
 /*-------------------
 5. RESPONSIVE

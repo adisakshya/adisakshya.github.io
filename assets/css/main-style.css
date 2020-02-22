@@ -524,7 +524,7 @@ ol ul {
 .list-count li {
   float: left;
   width: 50%;
-  padding: 10px 0 10px 25px;
+  padding: 10px 50px 10px 25px;
   position: relative;
   text-align: left;
   opacity: 0.5;
@@ -1490,7 +1490,7 @@ ol ul {
 }
 @media (max-height: 950px) {
   .list-count li {
-    float: none;
+    /* float: none; */
     display: inline-block;
     /* width: calc(100% / 5)!important; */
   }

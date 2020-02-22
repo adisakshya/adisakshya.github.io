@@ -1,1 +1,18 @@
-{"short_name":"adisakshya","name":"Adisakshya Chauhan","icons":[{"src":"/assets/img/192.png","type":"image/png","sizes":"192x192"},{"src":"/assets/img/512.png","type":"image/png","sizes":"512x512"}],"start_url":"/","display":"fullscreen"}
+{
+    "short_name":"adisakshya",
+    "name":"Adisakshya Chauhan",
+    "icons": [
+        {
+            "src":"assets/images/icons/site-icon-192x192.png",
+            "type":"image/png",
+            "sizes":"192x192"
+        },
+        {
+            "src":"assets/images/icons/site-icon-512x512.png",
+            "type":"image/png",
+            "sizes":"512x512"
+        }
+    ],
+    "start_url":"/",
+    "display":"fullscreen"
+}

@@ -37,7 +37,50 @@
 	<!-- Font Awesome -->
 	<script type="text/javascript" defer> (function() { var css = document.createElement('link'); css.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
 	<!-- loading style -->
-    <link rel="stylesheet" type="text/css" href="assets/css/loading.css">
+    <style>
+		#loading {
+			display: none;
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 9999;
+			background-color: #030408;
+		}
+		#loading .circle {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 80px;
+			height: 80px;
+			margin-top: -40px;
+			margin-left: -40px;
+			border-radius: 50%;
+			border: solid 5px #222;
+			border-top-color: #ccc;
+			-webkit-animation: spin 1s infinite linear;
+					animation: spin 1s infinite linear;
+		}
+		#loading.loaded {
+			display: none;
+		}
+		@-webkit-keyframes spin {
+			100% {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+		@keyframes spin {
+			100% {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+		@media (min-width: 992px) {
+			#loading {
+				display: block;
+			}
+		}
+	</style>
     <!-- font icon -->
     <link rel="preload" href="assets/css/fontperstar.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<!-- bootstrap style -->

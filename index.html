@@ -39,12 +39,12 @@
 	<!-- loading style -->
     <link rel="stylesheet" type="text/css" href="assets/css/loading.css">
     <!-- font icon -->
-    <link rel="stylesheet" type="text/css" href="assets/css/fontperstar.css">
-    <!-- bootstrap style -->
+    <link rel="preload" href="assets/css/fontperstar.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<!-- bootstrap style -->
     <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<!-- animate style -->
-    <link rel="stylesheet" type="text/css" href="assets/css/lib/animate.min.css">
-    <!-- owl carousel style -->
+    <link rel="preload" href="assets/css/lib/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<!-- owl carousel style -->
     <link rel="preload" href="assets/css/lib/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<!-- main style -->
     <link rel="preload" href="assets/css/main-style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -55,6 +55,8 @@
 	<script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://fonts.googleapis.com/css?family=Poppins:200,400,700'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
 	<script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://fonts.googleapis.com/css?family=Playfair+Display:400i'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
 	<noscript>
+		<link rel="stylesheet" href="assets/css/fontperstar.css">
+		<link rel="stylesheet" href="assets/css/lib/animate.min.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="assets/css/lib/owl.carousel.min.css">
 		<link rel="stylesheet" href="assets/css/main-style.css">

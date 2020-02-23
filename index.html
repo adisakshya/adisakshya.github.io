@@ -81,7 +81,7 @@
 	<!-- VCARD BOX -->
 	<div class="vcard-box animated">
 		<div class="avatar-section">
-			<img class="lazyload" src="assets/images/avatar.webp" alt="avatar" />
+			<img data-src="assets/images/avatar.webp" src="avatar" alt="avatar" />
 		</div>
 		<div class="infor-section">
 			<h4 class="name-title">Adisakshya Chauhan</h4>
@@ -110,7 +110,7 @@
 				<!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
 			  </div>
 			  <div class="modal-body modal-qrcode">
-				  <img class="lazyload" src="assets/images/qrcode.webp"/>
+				  <img data-src="assets/images/qrcode.webp" src="qrcode" />
 			  </div>
 			  <div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -149,9 +149,18 @@
         </div>
 	</div>
 	<!-- #CONTENTS -->
-	<!-- js plugin -->
-	<script type="text/javascript" src="assets/js/lazyloading.js" async></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script>
+		function init() {
+			var imgDefer = document.getElementsByTagName('img');
+			for (var i=0; i<imgDefer.length; i++) {
+				if(imgDefer[i].getAttribute('data-src')) {
+					imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+				} 
+			} 
+		}
+		window.onload = init;
+	</script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="assets/js/lib/waypoints.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script type="text/javascript" src="assets/js/lib/jquery.counterup.min.js"></script>

@@ -35,25 +35,31 @@
 	<!-- PWA Manifest -->
 	<link rel="manifest" href="manifest.json">
 	<!-- Font Awesome -->
-	<script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
+	<script type="text/javascript" defer> (function() { var css = document.createElement('link'); css.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
 	<!-- loading style -->
     <link rel="stylesheet" type="text/css" href="assets/css/loading.css">
     <!-- font icon -->
     <link rel="stylesheet" type="text/css" href="assets/css/fontperstar.css">
     <!-- bootstrap style -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- animate style -->
+    <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<!-- animate style -->
     <link rel="stylesheet" type="text/css" href="assets/css/lib/animate.min.css">
     <!-- owl carousel style -->
-    <link rel="stylesheet" type="text/css" href="assets/css/lib/owl.carousel.min.css">
-    <!-- main style -->
-    <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
-    <!-- heading style -->
-    <link rel="stylesheet" type="text/css" href="assets/css/heading.css">
-    <!-- embed font -->
+    <link rel="preload" href="assets/css/lib/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<!-- main style -->
+    <link rel="preload" href="assets/css/main-style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<!-- heading style -->
+    <link rel="preload" href="assets/css/heading.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<!-- embed font -->
     <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://fonts.googleapis.com/css?family=Roboto:300,400'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
 	<script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://fonts.googleapis.com/css?family=Poppins:200,400,700'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
 	<script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://fonts.googleapis.com/css?family=Playfair+Display:400i'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
+	<noscript>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/lib/owl.carousel.min.css">
+		<link rel="stylesheet" href="assets/css/main-style.css">
+		<link rel="stylesheet" href="assets/css/heading.css">
+	</noscript>
 </head>
 <body>
     <!-- LOADING PAGE -->

@@ -1,8 +1,7 @@
-# Portfolio
+# My personal website
 
-### Made using Bootstrap
+Featuring my work experience and portfolio.
 
 [Adisakshya Chauhan](https://adisakshya.github.io/)
 
-- Under development
 - Blog comming soon

@@ -1,6 +1,20 @@
-Home
-    - [ ] Common bar introduction - Different for every page
-    - [ ] Attach CV
+Common
+    - [ ] Journey Page (Developer & Achievements)
+        - Slider journey cards
+    - [ ] Attach CV on project-expo page and website
+    - [ ] Common bar introduction
+        - [ ] Home
+            - Student
+            - Developer
+            - Interests
+            - Explore
+        - [ ] About
+            - Passion
+            - Hobbies
+            - Numbers
+        - [ ] Portfolio
+            - [ ] Learnings from projects and courses
+        - [ ] Contact
 
 About
     - [ ] Interesting Bio
@@ -26,3 +40,7 @@ Portfolio
 Contact
     - [ ] Remove extra space between tag line and email/location
     - [ ] Add phone number field (optional with email)
+
+Addons
+    - [ ] Share Option
+    - [ ] WhatsApp Message from form

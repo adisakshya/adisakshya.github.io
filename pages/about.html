@@ -48,11 +48,21 @@
     <!-- owl carousel style -->
     <link rel="stylesheet" type="text/css" href="../assets/css/lib/owl.carousel.min.css">
     <!-- main style -->
-    <link rel="stylesheet" type="text/css" href="../assets/css/main-style.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/main-style.css">
+	<!-- journey style -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/journey.css">
     <!-- embed font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400i" rel="stylesheet">
+	<script>
+		window.console = window.console || function(t) {};
+	</script>
+	<script>
+		if (document.location.search.match(/type=embed/gi)) {
+			window.parent.postMessage("resize", "*");
+		}
+	</script>
 </head>
 <body>
     <!-- LOADING PAGE -->
@@ -117,10 +127,10 @@
 			</div>
 		  </div>
 		</div>
-	  </div>
+	</div>
 	<!-- #VCARD BOX -->
 	<!-- CONTENTS -->
-	<div class="content-wrap animated">
+	<!-- <div class="content-wrap animated">
         <div class="background" style="background-image: url(../assets/images/bg/2.webp);">
             <div id="particles-js"></div>
         </div>
@@ -138,16 +148,44 @@
 					love learning new things and proactively seeking new concepts
 					<br>
 				</div>
-        </div>
-		<ul class="list-count clearfix">
-			<li><h4 class="counter">21</h4><span>Years old</span></li>
-			<li><h4 class="counter">9</h4><span>Working Hours</span></li>
-			<li><h4 class="counter">9.3</h4><span>Current CGPA</span></li>
-			<li><h4 class="counter">2021</h4><span>Graduation Year</span></li>
-			<!-- <li><h4 class="counter" style='display:inline;'>1200</h4><i class='fa fa-plus plus'></i><span><br>Open Source Contributions</span></li> -->
-		</ul>
-		<div class="text-free">ABOUT ME</div>
+        	</div>
+			<div class="text-free">My Journey</div>
+		</div>
+	</div> -->
+	<!-- JOURNEY -->
+	<div class="timeline-container" id="timeline-1">
+		<!-- <div class="timeline-header">
+			<h2 class="timeline-header__title">Mustafa Kemal Atatürk</h2>
+			<h3 class="timeline-header__subtitle">FATHER OF THE TURKS</h3>
+		</div> -->
+		<div class="timeline">
+			<div class="timeline-item" data-text="FATHER OF THE TURKS">
+				<div class="timeline__content"><img class="timeline__img" src="http://i.cdn.ensonhaber.com/resimler/diger/ataturk_3473.jpg" />
+				<h2 class="timeline__content-title">1881</h2>
+				<p class="timeline__content-desc">He was born in 1881 (probably in the spring) in Salonica, then an Ottoman city, now inGreece. His father Ali Riza, a customs official turned lumber merchant, died when Mustafawas still a boy. His mother Zubeyde, adevout and strong-willed woman, raised him and his sister.</p>
+				</div>
+			</div>
+			<div class="timeline-item" data-text="FATHER OF THE TURKS">
+				<div class="timeline__content"><img class="timeline__img" src="http://i.cdn.ensonhaber.com/resimler/diger/ataturk_3473.jpg" />
+				<h2 class="timeline__content-title">1881</h2>
+				<p class="timeline__content-desc">He was born in 1881 (probably in the spring) in Salonica, then an Ottoman city, now inGreece. His father Ali Riza, a customs official turned lumber merchant, died when Mustafawas still a boy. His mother Zubeyde, adevout and strong-willed woman, raised him and his sister.</p>
+				</div>
+			</div>
+			<div class="timeline-item" data-text="FATHER OF THE TURKS">
+				<div class="timeline__content"><img class="timeline__img" src="http://i.cdn.ensonhaber.com/resimler/diger/ataturk_3473.jpg" />
+				<h2 class="timeline__content-title">1881</h2>
+				<p class="timeline__content-desc">He was born in 1881 (probably in the spring) in Salonica, then an Ottoman city, now inGreece. His father Ali Riza, a customs official turned lumber merchant, died when Mustafawas still a boy. His mother Zubeyde, adevout and strong-willed woman, raised him and his sister.</p>
+				</div>
+			</div>
+			<div class="timeline-item" data-text="FATHER OF THE TURKS">
+				<div class="timeline__content"><img class="timeline__img" src="http://i.cdn.ensonhaber.com/resimler/diger/ataturk_3473.jpg" />
+				<h2 class="timeline__content-title">1881</h2>
+				<p class="timeline__content-desc">He was born in 1881 (probably in the spring) in Salonica, then an Ottoman city, now inGreece. His father Ali Riza, a customs official turned lumber merchant, died when Mustafawas still a boy. His mother Zubeyde, adevout and strong-willed woman, raised him and his sister.</p>
+				</div>
+			</div>
+		</div>
 	</div>
+
 	<!-- #CONTENTS -->
 	<!-- js plugin -->
 	<script type="text/javascript" src="../assets/js/lib/jquery.min.js"></script>
@@ -158,5 +196,6 @@
 	<script type="text/javascript" src="../assets/js/lib/descrambler.min.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/particles.min.js"></script>
 	<script type="text/javascript" src="../assets/js/functions.js"></script>
+	<script src='../assets/js/journey.js'></script>
 </body>
 </html>

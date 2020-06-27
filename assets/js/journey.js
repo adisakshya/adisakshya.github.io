@@ -58,4 +58,4 @@ Link to pen: https://codepen.io/knyttneve/pen/bgvmma/
 	};
 })(jQuery);
 
-$("#timeline-1").timeline();
+$("#journey").timeline();

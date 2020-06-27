@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - Horizontal timeline mockup v2</title>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<style>
+*{margin: 0;padding: 0;}
+body {
+  background: #ddd;
+}
+
+#container
+{
+height: 600px;
+width: 100%;
+background-color: #ddd;
+overflow: hidden;
+position: relative;
+#overflow-x: scroll;
+  margin-top: 30px;
+  display: inline-block;
+}
+
+#thumbs
+{
+background-color: #ddd;
+position: absolute;
+top: 0px;
+left: 0px;
+height: 100%;
+width: auto;
+overflow: hidden;
+white-space: nowrap;
+padding: 30px 100px;
+}
+
+.history-block {
+  height: 100%;
+  width: 300px;
+  background-color: #cdcdcd;
+  margin: 0 -2px;
+  border-right: 1px solid #fff;
+  display: inline-block;
+  font-family: 'roboto condensed', sans-serif;
+  font-size:60px;
+  font-weight: 100;
+  color: #FFF;
+  cursor: pointer;
+  box-shadow: 2px 5px 20px rgba(0,0,0,0.8);
+  transition: width 0.2s;
+}
+
+.history-block:last-of-type {
+  border-right: none;
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  transition: background .5s;
+  background: rgba(0,0,0,0.8);
+}
+
+.cover:hover {
+  width: 100%;
+  height: 100%;
+  transition: background .5s;
+  background: rgba(0,0,0,0.8);
+}
+
+.year {
+  position: absolute;
+    top: 0px;
+    font-size: 30px;
+  font-weight:500;
+    margin: 40px 30px;
+}
+
+.title {
+  position: absolute;
+  display: block;
+  width: 260px;
+    top: 60px;
+    font-size: 15px;
+    margin: 30px;
+  white-space: normal;
+  transition: width 0.2s;
+}
+
+.timeline {
+  display:none;
+  position: absolute;
+  bottom: 80px;
+    font-size: 20px;
+    margin: 20px;
+  transition: display 0.8s;
+}
+
+.timeline ul {
+  margin: 0;
+padding: 0;
+list-style-type: none;
+text-align: center;
+}
+
+.timeline ul li {
+  display: inline;
+  font-size: 15px;
+  font-weight: 100;
+  padding: 0px 5px;
+}
+
+.timeline ul li {
+  display: inline;
+  font-size: 15px;
+  font-weight: 100;
+  padding: 0px 5px;
+}
+
+.timeline ul li:before {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  color: rgba(255,255,255,0.5);
+  content: '\f10c';
+  position: absolute;
+  top: 30px;
+  margin-left:10px;
+  transition: all 0.5s;
+}
+
+.timeline ul li:after {
+  content: '';
+  position: absolute;
+  top: 40px;
+  margin-left:-10px;
+  width: 36px;
+  height:2px;
+  border: 1px solid rgba(255,255,255,0.5);
+  transition: all 0.5s;
+}
+
+.timelineYear, .timelineYear:hover {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.8s;
+}
+
+.timeline ul li:hover:before {
+  content: '\f111';
+  color: #ffffff;
+  font-size: 18px;
+  transition: all 0.5s;
+  top: 29px;
+  margin-left:9px
+}
+
+.timeline ul li:hover:after {
+  content: '';
+  position: absolute;
+  top: 40px;
+  margin-left:-10px;
+  width: 36px;
+  height:2px;
+  border: 1px solid #fff;
+  transition: all 0.5s;
+}
+
+.timeline ul li:hover .timelineYear {
+  position: static;
+  top:-10px;
+}
+
+.bg-66 {
+  background: url(http://www.unido.org/uploads/tx_templavoila/history_07.jpg);
+  background-size:cover;
+}
+
+.bg-76 {
+  background: url(http://austria-forum.org/attach/Wissenssammlungen/Bibliothek/Wien_mit_den_Augen_des_Adlers/Wien_der_Moderne/UNO-City,_Austria_Center_Vienna/dkaiser_hav_25.jpg);
+  background-size:cover;
+}
+
+.bg-86 {
+  background: url('https://upload.wikimedia.org/wikipedia/commons/e/e8/Power_Plant_(Tianjin,_China).jpg');
+  background-size:cover;
+}
+
+.bg-96 {
+  background: url(http://www.oxfordbusinessgroup.com/sites/default/files/styles/chapter_header__710x233_/public/chapter_headers/ind1_2.png?itok=uxI_081i&c=af7608f5f35cf219c326e9b6e6a7d34c);
+  background-size:cover;
+}
+
+.bg-06 {
+  background: url(http://www.3adi.org/tl_files/3ADIDocuments/Pictures/Greenshot_2014-01-08_18-32-54.jpg);
+  background-size:cover;
+}
+
+.bg-16 {
+  background: url(https://i.dailymail.co.uk/i/pix/2012/07/23/article-0-142DF918000005DC-387_468x665.jpg);
+  background-size:cover;
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div id="container">
+<div id="thumbs">
+<div class="history-block bg-66">
+<div class="cover"></div>
+<div class="year">1966 - 1976</div>
+<div class="title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</div>
+<div class="timeline">
+<ul>
+<li><a href="" class="timelineYear">1966</a></li>
+<li><a href="" class="timelineYear">1967</a></li>
+<li><a href="" class="timelineYear">1968</a></li>
+<li><a href="" class="timelineYear">1969</a></li>
+<li><a href="" class="timelineYear">1970</a></li>
+<li><a href="" class="timelineYear">1971</a></li>
+<li><a href="" class="timelineYear">1972</a></li>
+<li><a href="" class="timelineYear">1973</a></li>
+<li><a href="" class="timelineYear">1974</a></li>
+<li><a href="" class="timelineYear">1975</a></li>
+<li><a href="" class="timelineYear">1976</a></li>
+</ul>
+</div>
+</div>
+<div class="history-block bg-76">
+<div class="cover"></div>
+<div class="year">1976 - 1986</div>
+<div class="title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</div>
+<div class="timeline">
+<ul>
+<li><a href="" class="timelineYear">1976</a></li>
+<li><a href="" class="timelineYear">1977</a></li>
+<li><a href="" class="timelineYear">1978</a></li>
+<li><a href="" class="timelineYear">1979</a></li>
+<li><a href="" class="timelineYear">1980</a></li>
+<li><a href="" class="timelineYear">1981</a></li>
+<li><a href="" class="timelineYear">1982</a></li>
+<li><a href="" class="timelineYear">1983</a></li>
+<li><a href="" class="timelineYear">1984</a></li>
+<li><a href="" class="timelineYear">1985</a></li>
+<li><a href="" class="timelineYear">1986</a></li>
+</ul>
+</div>
+</div>
+<div class="history-block bg-86">
+<div class="cover"></div>
+<div class="year">1986 - 1996</div>
+<div class="title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</div>
+<div class="timeline">
+<ul>
+<li><a href="" class="timelineYear">1986</a></li>
+<li><a href="" class="timelineYear">1987</a></li>
+<li><a href="" class="timelineYear">1988</a></li>
+<li><a href="" class="timelineYear">1989</a></li>
+<li><a href="" class="timelineYear">1990</a></li>
+<li><a href="" class="timelineYear">1991</a></li>
+<li><a href="" class="timelineYear">1992</a></li>
+<li><a href="" class="timelineYear">1993</a></li>
+<li><a href="" class="timelineYear">1994</a></li>
+<li><a href="" class="timelineYear">1995</a></li>
+<li><a href="" class="timelineYear">1996</a></li>
+</ul>
+</div>
+</div>
+<div class="history-block bg-96">
+<div class="cover"></div>
+<div class="year">1996 - 2006</div>
+<div class="title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</div>
+ <div class="timeline">
+<ul>
+<li><a href="" class="timelineYear">1996</a></li>
+<li><a href="" class="timelineYear">1997</a></li>
+<li><a href="" class="timelineYear">1998</a></li>
+<li><a href="" class="timelineYear">1999</a></li>
+<li><a href="" class="timelineYear">2000</a></li>
+<li><a href="" class="timelineYear">2001</a></li>
+<li><a href="" class="timelineYear">2002</a></li>
+<li><a href="" class="timelineYear">2003</a></li>
+<li><a href="" class="timelineYear">2004</a></li>
+<li><a href="" class="timelineYear">2005</a></li>
+<li><a href="" class="timelineYear">2006</a></li>
+</ul>
+</div>
+</div>
+<div class="history-block bg-06">
+<div class="cover"></div>
+<div class="year">2006-2016</div>
+<div class="title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</div>
+<div class="timeline">
+<ul>
+<li><a href="" class="timelineYear">2006</a></li>
+<li><a href="" class="timelineYear">2007</a></li>
+<li><a href="" class="timelineYear">2008</a></li>
+<li><a href="" class="timelineYear">2009</a></li>
+<li><a href="" class="timelineYear">2010</a></li>
+<li><a href="" class="timelineYear">2011</a></li>
+<li><a href="" class="timelineYear">2012</a></li>
+<li><a href="" class="timelineYear">2013</a></li>
+<li><a href="" class="timelineYear">2014</a></li>
+<li><a href="" class="timelineYear">2015</a></li>
+<li><a href="" class="timelineYear">2016</a></li>
+</ul>
+</div>
+</div>
+<div class="history-block bg-16">
+<div class="cover"></div>
+<div class="year">FUTURE</div>
+<div class="title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</div>
+<div class="timeline">
+To our bright future!!! :)
+</div>
+</div>
+</div>
+</div>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script id="rendered-js">
+var viewportWidth, divWidth, tb;
+$(function () {
+
+  viewport = $('#container').innerWidth();
+  tb = $('#thumbs');
+  divWidth = tb.outerWidth();
+
+  $('#container').mousemove(function (e)
+  {
+    tb.css({ left: ((viewport - divWidth) * (e.pageX / viewport).toFixed(3)).toFixed(1) + "px" });
+  });
+
+  $('.history-block').on('click', function () {
+    $('.history-block').css('width', '300px');
+    $('.history-block').find('.title').css('width', '260px');
+    $('.history-block .timeline').hide(300);
+    $(this).css('width', '600px');
+    $(this).find('.title').css('width', '500px');
+    $(this).find('.timeline').show(800);
+    $('#container').mousemove(function (e)
+    {
+      tb.css({ left: ((viewport - divWidth - 300) * (e.pageX / viewport).toFixed(3)).toFixed(1) + 300 + "px" });
+    });
+  });
+
+  $('.timeline ul li').on('click', function () {
+    $(this).parent().blink();
+  });
+});
+//# sourceURL=pen.js
+    </script>
+</body>
+</html>

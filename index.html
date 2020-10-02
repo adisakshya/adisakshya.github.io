@@ -202,6 +202,40 @@
             </div>
         </div>
 	</div>
+	<script src="//code.tidio.co/gultz0jxsgbei6irsnjosca7wqyo5abi.js" async></script>
+</body>
+	<script>
+		function hideTdo() {
+			var timer = null;
+			var target = document.querySelector('#tidio-chat iframe');
+			if(!target) {
+				if(timer !== null) {
+				clearTimeout(timer);
+				}
+				timer = setTimeout(hideTdo, 500);
+				return;
+			} else {
+				var timer2 = null;
+				var tdo = document.querySelector('#tidio-chat iframe')
+							.contentDocument
+							.querySelector('a[href*="tidio.com/powered"]');
+				if(!tdo) {
+				if(timer2 !== null) {
+					clearTimeout(timer2);
+				}
+				timer2 = setTimeout(hideTdo, 1);
+				return;
+				}
+				document.querySelector('#tidio-chat iframe')
+				.contentDocument
+				.querySelector('a[href*="tidio.com/powered"]')
+				.remove();
+				return true;
+			}
+		}
+		hideTdo();
+		setInterval(hideTdo, 10);
+	</script>
 	<!-- #CONTENTS -->
 	<script defer>
 		function init() {
@@ -222,3 +256,5 @@
     <script type="text/javascript" src="assets/js/functions.js" defer></script>
     <script type="text/javascript" src="assets/js/heading.js" defer></script>
 </html>
+
+<!-- “Hi there! My name is [name of bot], your [brand] assistant. I can [send you updates / connect you with a manager / help you navigate through the website / explain our new offers] via chat. -->

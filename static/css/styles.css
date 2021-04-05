@@ -20,6 +20,7 @@ code {
 
 body, html {
     scroll-behavior: smooth;
+    height: 100vh;
 }
 body {
     margin: 0;
@@ -248,6 +249,16 @@ input:checked + .slider:after {
     }
     .greeting-image-div {
         height: 100%;
+    }
+}
+@media (min-width: 1280px) {
+    .greet-main {
+        margin: auto;
+        position: relative;
+        top: 40%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
     }
 }
 

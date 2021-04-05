@@ -12,9 +12,34 @@
         <link rel="preload" href="static/media/Montserrat-Regular.ee653992.ttf" as="font" type="font/woff" />
         <link rel="preload" href="static/media/Agustina.21f233e1.woff" as="font" type="font/woff" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+        <link href="static/css/preloader.css" rel="stylesheet" />
         <link href="static/css/styles.css" rel="stylesheet" />
     </head>
     <body>
+        <!-- PRELOADER -->
+        <div id="loader-wrapper">
+            <!-- BODY OF PERSON -->
+            <div class='body'>
+                <span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+                <div class='base'>
+                  <span></span>
+                  <div class='face'></div>
+                </div>
+            </div>
+            <!-- SPEED SURROUNDING -->
+            <div class='longfazers'>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
         <!-- Header -->
         <div class="header-wrapper" style="height: 99px;">
             <div style="position: relative; top: 0px; left: 0px; right: 0px; z-index: 1; transform: translate3d(0px, 0px, 0px);">
@@ -63,5 +88,23 @@
                 </div>
             </div>
         </div>
+
+        <!-- PRELOADER SCRIPT -->
+        <script>
+            window.addEventListener("load", () => {
+                // Document fully loaded -> fade-out preloader - https://stackoverflow.com/a/29017547
+                let fadeTarget = document.getElementById("loader-wrapper");
+                let fadeEffect = setInterval(function () {
+                    if (!fadeTarget.style.opacity) {
+                        fadeTarget.style.opacity = 1;
+                    }
+                    if (fadeTarget.style.opacity > 0) {
+                        fadeTarget.style.opacity -= 0.1;
+                    } else {
+                        clearInterval(fadeEffect);
+                    }
+                }, 10);
+            });
+        </script>
     </body>
 </html>

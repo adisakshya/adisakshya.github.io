@@ -18,5 +18,5 @@ let adisakshya = {
     cv: 'cv.adisakshya.codes'
   },
   funFact: 'First of his name on Earth',
-  quote: 'There is always more to reality than one imagines - Prof. Paradox'
+  quote: 'There is always more to reality than one imagines - Prof. Paradox',
 }

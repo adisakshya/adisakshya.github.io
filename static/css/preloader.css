@@ -2,9 +2,6 @@
  * PEN BY Mr. Alien - https://codepen.io/mr_alien/pen/FDLjg
  */
 
-body {
-  overflow: hidden;
-}
 .body {
   position: absolute;
   top: 50%;
@@ -174,6 +171,7 @@ body {
   height: 100%;
   z-index: 99;
   background-color: #ffffff;
+  overflow: hidden;
 }
 .longfazers span {
   position: absolute;

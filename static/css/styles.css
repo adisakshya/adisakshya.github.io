@@ -312,3 +312,8 @@ input:checked + .slider:after {
         text-align: center;
     }
 }
+@media (max-width: 450px) {
+    .mobile {
+        display: none;
+    }
+}

@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- META -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="Adisakshya Chauhan" content="🌌 Adisakshya's space on web" />
-        <title>Adiakshya Chauhan</title>
         <meta property="og:title" content="Adisakshya Chauhan" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://adisakshya.codes/" />
         <meta property="og:image" content="static/images/adisakshya-profile-dark.svg" />
+        <!-- TITLE -->
+        <title>Adiakshya Chauhan</title>
+        <!-- STYLES -->
         <link rel="preload" href="static/media/Montserrat-Regular.ee653992.ttf" as="font" type="font/woff" />
         <link rel="preload" href="static/media/Agustina.21f233e1.woff" as="font" type="font/woff" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+        <style>
+            :root {
+                --primary-color: #302AE6;
+                --secondary-color: #536390;
+                --font-color: #424242;
+                --bg-color: #fff;
+                --heading-color: #292922;
+            }
+            [data-theme="dark"] {
+                --primary-color: #9A97F3;
+                --secondary-color: #818cab;
+                --font-color: #e1e1ff;
+                --bg-color: #161625;
+                --heading-color: #818cab;
+            }
+        </style>
         <link href="static/css/preloader.css" rel="stylesheet" />
         <link href="static/css/styles.css" rel="stylesheet" />
+        <link href="static/css/dark.css" rel="stylesheet" />
         <link href="static/css/modal.css" rel="stylesheet" />
     </head>
     <body>
@@ -41,12 +61,12 @@
             </div>
         </div>
 
-        <!-- Header -->
+        <!-- HEADER -->
         <div class="header-wrapper" style="height: 99px;">
             <div style="position: relative; top: 0px; left: 0px; right: 0px; z-index: 1; transform: translate3d(0px, 0px, 0px);">
                 <header class="header">
                     <!-- LOGO -->
-                    <div href="#" class="logo" style="color: blue;">
+                    <div href="#" class="logo">
                         <span class="grey-color"> &lt;</span>
                         <span class="logo-name">Adisakshya Chauhan</span>
                         <span class="grey-color">/&gt;</span>
@@ -54,16 +74,21 @@
                 </header>
             </div>
         </div>
+
+        <!-- THEME TOGGLE -->
+        <div class="dark--toggle">
+            <img src="static/images/sun.webp" alt="🟡">
+        </div>
         
-        <!-- Content -->
+        <!-- CONTENT -->
         <div class="greet-main">
             <div class="greeting-main">
-                <!-- Greeting text -->
+                <!-- GREETING TEXT -->
                 <div class="greeting-text-wrapper" style="padding-right: 5%;">
                     <h1 class="greeting-text">
                         adisakshya
                         <span>
-                            <img img alt="👋" draggable="false" src="static/images/gif/cat.webp"  style="height: 1.2em; width: 1.5em; margin: 0px 0.05em 0px 0.1em; vertical-align: -0.1em;">
+                            <img id="typing-cat" img alt="👋" draggable="false" src="static/images/gif/cat-light.webp"  style="height: 1.2em; width: 1.5em; margin: 0px 0.05em 0px 0.1em; vertical-align: -0.1em;">
                         </span>
                     </h1>
                     <p class="greeting-text-p subTitle">
@@ -80,47 +105,42 @@
                     </div>
                 </div>
 
-                <!-- Greeting image -->
+                <!-- GREETING IMAGE -->
                 <div class="greeting-image-div">
-                    <div style="width: 100%; height: 100%; overflow: hidden; margin: 0px auto; outline: none;">
+                    <div style="width: 100%; height: 100%; margin: auto; outline: none;">
                         <img id="profile-json" src="#" style="width: 100%; height: auto;" />
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- QR Code Modal -->
+        <!-- QR CODE MODAL -->
         <div id="open-modal" class="modal-window">
             <div>
-                <h1>Scan to open website in mobile devices</h1>
+                <h1 style="color:#292922">Scan to open website in mobile devices</h1>
                 <img src="static/images/qrcode/qrcode.webp" style="width: 100%;" />
-                <a href="#" title="Close" class="modal-close">Close</a>
+                <a href="#" title="Close" class="modal-close" style="color:#292922">Close</a>
             </div>
         </div>
 
         <!-- PRELOADER SCRIPT -->
+        <script type="text/javascript" src="static/js/preloader.js"></script>
+        <!-- THEME SELECTION SCRIPT -->
+        <script type="text/javascript" src="static/js/theme-selector.js"></script>
+        <!-- PROFILE JSON SCRIPT -->
         <script>
-            window.addEventListener("load", () => {
-                // Document fully loaded -> fade-out preloader - https://stackoverflow.com/a/29017547
-                let fadeTarget = document.getElementById("loader-wrapper");
-                let fadeEffect = setInterval(function () {
-                    if (!fadeTarget.style.opacity) {
-                        fadeTarget.style.opacity = 1;
-                    }
-                    if (fadeTarget.style.opacity > 0) {
-                        fadeTarget.style.opacity -= 0.1;
-                    } else {
-                        clearInterval(fadeEffect);
-                    }
-                }, 10);
-            });
-        </script>
-        <!-- PROFILE IMAGE SELECTION (Support Emoji's) -->
-        <script>
+            // Profile image selection
             if (navigator.appVersion.indexOf("Win") != -1) {
                 document.getElementById("profile-json").src = "static/images/adisakshya-profile-windows.svg";
             } else {
                 document.getElementById("profile-json").src = "static/images/adisakshya-profile-others.svg";
+            }
+            // Profile json border
+            document.querySelector('.greeting-image-div').onmousemove = (e) => {
+                const x = e.pageX - e.target.offsetLeft
+                const y = e.pageY - e.target.offsetTop
+                e.target.style.setProperty('--x', `${ x }px`)
+                e.target.style.setProperty('--y', `${ y }px`)
             }
         </script>
     </body>

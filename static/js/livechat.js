@@ -3,7 +3,7 @@ function hideTdo() {
     var target = document.querySelector('#tidio-chat iframe');
     if(!target) {
         if(timer !== null) {
-        clearTimeout(timer);
+            clearTimeout(timer);
         }
         timer = setTimeout(hideTdo, 500);
         return;
@@ -13,16 +13,16 @@ function hideTdo() {
                     .contentDocument
                     .querySelector('a[href*="tidio.com/powered"]');
         if(!tdo) {
-        if(timer2 !== null) {
-            clearTimeout(timer2);
-        }
-        timer2 = setTimeout(hideTdo, 1);
-        return;
+            if(timer2 !== null) {
+                clearTimeout(timer2);
+            }
+            timer2 = setTimeout(hideTdo, 1);
+            return;
         }
         document.querySelector('#tidio-chat iframe')
-        .contentDocument
-        .querySelector('a[href*="tidio.com/powered"]')
-        .remove();
+            .contentDocument
+            .querySelector('a[href*="tidio.com/powered"]')
+            .remove();
         return true;
     }
 }

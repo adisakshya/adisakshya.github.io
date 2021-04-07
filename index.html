@@ -7,14 +7,16 @@
         <meta name="Adisakshya Chauhan" content="🌌 Adisakshya's space on web" />
         <meta property="og:title" content="Adisakshya Chauhan" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://adisakshya.codes/" />
+        <meta property="og:url" content="https://adisakshya.codes" />
         <meta property="og:image" content="static/images/adisakshya-profile-dark.svg" />
         <!-- TITLE -->
         <title>Adiakshya Chauhan</title>
+        <!-- FONTS -->
+        <link rel="prefetch" href="static/media/Montserrat-Regular.ee653992.ttf" as="font" onload="this.onload=null;this.rel='font/woff'">
+        <link rel="prefetch" href="static/media/Agustina.21f233e1.woff" as="font" onload="this.onload=null;this.rel='font/woff'">
+        <!-- FONT AWESOME -->
+        <script type="text/javascript" defer> (function() { var css = document.createElement('link'); css.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
         <!-- STYLES -->
-        <link rel="preload" href="static/media/Montserrat-Regular.ee653992.ttf" as="font" type="font/woff" />
-        <link rel="preload" href="static/media/Agustina.21f233e1.woff" as="font" type="font/woff" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
         <style>
             :root {
                 --primary-color: #302AE6;
@@ -31,10 +33,10 @@
                 --heading-color: #818cab;
             }
         </style>
-        <link href="static/css/preloader.css" rel="stylesheet" />
-        <link href="static/css/styles.css" rel="stylesheet" />
-        <link href="static/css/dark.css" rel="stylesheet" />
-        <link href="static/css/modal.css" rel="stylesheet" />
+        <link rel="preload" href="static/css/preloader.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="prefetch" href="static/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="stylesheet" href="static/css/dark.css">
+        <link rel="stylesheet" href="static/css/modal.css">
     </head>
     <body>
         <!-- PRELOADER -->
@@ -123,10 +125,22 @@
             </div>
         </div>
 
+        <!-- DEFER IMAGES -->
+        <script defer>
+            function init() {
+                let imgDefer = document.getElementsByTagName('img');
+                for (let i=0; i < imgDefer.length; i++) {
+                    if(imgDefer[i].getAttribute('data-src')) {
+                        imgDefer[i].setAttribute('src', imgDefer[i].getAttribute('data-src'));
+                    } 
+                } 
+            }
+            window.onload = init;
+        </script>
         <!-- PRELOADER SCRIPT -->
         <script type="text/javascript" src="static/js/preloader.js"></script>
         <!-- THEME SELECTION SCRIPT -->
-        <script type="text/javascript" src="static/js/theme-selector.js"></script>
+        <script type="text/javascript" src="static/js/theme-selector.js" defer></script>
         <!-- PROFILE JSON SCRIPT -->
         <script>
             // Profile image selection
@@ -143,12 +157,12 @@
                 e.target.style.setProperty('--y', `${ y }px`)
             }
         </script>
-        <!-- LIVE CHAT SCRIPT -->
-        <script src="static/js/livechat.js" async></script>
-        <script src="https://code.tidio.co/gultz0jxsgbei6irsnjosca7wqyo5abi.js" async></script>
         <!-- ARTS -->
-        <script type="text/javascript" src="static/js/arts.js"></script>
+        <script type="text/javascript" src="static/js/arts.js" defer></script>
         <!-- PROFILE -->
-        <script type="text/javascript" src="static/js/profile.js"></script>
+        <script type="text/javascript" src="static/js/profile.js" defer></script>
+        <!-- LIVE CHAT SCRIPT -->
+        <script src="static/js/livechat.js"></script>
+        <script src="https://code.tidio.co/gultz0jxsgbei6irsnjosca7wqyo5abi.js" async></script>
     </body>
 </html>

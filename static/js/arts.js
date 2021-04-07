@@ -19,3 +19,7 @@ const standard = `
  \\__,_|\\__,_|_|___/\\__,_|_|\\_\\___/_| |_|\\__, |\\__,_|
                                         |___/       
 `
+const arts = [starwars, standard]
+
+// PRINT RANDOM ASCII ART
+console.log(arts[Math.floor(Math.random() * arts.length)] + '\n');

@@ -1,0 +1,317 @@
+/* FONTS */
+
+@font-face {
+    font-family: "Agustina Regular";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Agustina Regular"), url(../media/agustina.21f233e1.woff) format("woff");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: local("Montserrat"), url(../media/montserrat-regular.ee653992.ttf) format("woff");
+    font-display: swap;
+}
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* GENERAL */
+
+body, html {
+    scroll-behavior: smooth;
+    height: 100vh;
+}
+body {
+    margin: 0;
+    font: 19px/23px Montserrat, "Montserrat", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+@media (max-width: 1380px) {
+    body, html {
+        font-size: 16px;
+        line-height: normal;
+    }
+}
+
+/* HEADER */
+
+.header {
+    max-width: 100%;
+    padding: 15px 20px;
+    margin: 0 auto;
+}
+.grey-color {
+    color: #868e96;
+}
+
+/* HEADER LOGO */
+
+.header .logo {
+    display: block;
+    flex: none;
+    float: left;
+    font-size: 1.5em;
+    text-decoration: none;
+    margin-top: 10px;
+    line-height: normal;
+}
+.header .logo-name {
+    font-family: "Agustina Regular";
+    font-weight: 700;
+    font-feature-settings: "liga", "clig off";
+    font-variant-ligatures: no-common-ligatures;
+    -webkit-font-variant-ligatures: no-common-ligatures;
+    padding: 0 10px;
+}
+
+/* MEDIA RULES FOR HEADER */
+
+@media (min-width: 48em) {
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+@media (max-width: 960px) and (min-width: 768px) {
+    .header {
+        font-size: 12px;
+    }
+}
+@media (max-width: 450px) {
+    .header .logo {
+        float: none;
+        text-align: center;
+    }
+}
+@media (max-width: 320px) {
+    .header .logo {
+        font-size: 1.3em;
+    }
+}
+@media (max-width: 280px) {
+    .header .logo {
+        font-size: 1.1em;
+    }
+}
+
+/* THEME SWITCHER */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+input {
+    transform: scale(0.5);
+}
+.slider {
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    background-color: #ccc;
+}
+.slider, .slider:before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.4s;
+}
+.slider:before {
+    content: "";
+    height: 26px;
+    width: 28px;
+    background-color: #fff;
+}
+input:checked + .slider {
+    background-color: #2196f3;
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+}
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
+.slider:after {
+    display: inline;
+    position: absolute;
+    right: 9.3%;
+    bottom: 17.5%;
+}
+input:checked + .slider:after {
+    display: inline;
+    position: absolute;
+    right: 56.3%;
+    bottom: 14.5%;
+}
+@media (max-width: 786px) and (min-width: 425px) {
+    input:checked + .slider:after {
+        right: 60.3%;
+        bottom: 20.5%;
+    }
+    .slider:after {
+        right: 15.3%;
+        bottom: 22.5%;
+    }
+}
+@media (max-width: 2560px) and (min-width: 1552px) {
+    .slider:after {
+        bottom: 12.5% !important;
+    }
+}
+@media (max-width: 1552px) and (min-width: 1440px) {
+    .slider:after {
+        bottom: 7.5% !important;
+    }
+}
+
+/* CONTENT */
+
+.greet-main {
+    width: 90%;
+    padding: 20px 10px;
+}
+.greet-main {
+    margin: auto;
+}
+.greeting-main {
+    display: flex;
+}
+.greeting-main > * {
+    flex: 1 1;
+    margin-bottom: 30px;
+}
+.greeting-text {
+    font-size: 3.5em;
+    line-height: 1.1;
+}
+.greeting-text-p {
+    font-size: 20px;
+    line-height: 30px;
+}
+.greeting-image-div > img {
+    max-width: 100%;
+    height: auto;
+}
+@media (max-width: 1024px) {
+    .greeting-text {
+        font-size: 3.125em;
+        text-align: center;
+    }
+    .greeting-text-p {
+        font-size: 1.12em;
+        line-height: normal;
+        text-align: center;
+    }
+    .greeting-main {
+        display: block;
+    }
+}
+@media (max-width: 768px) {
+    .greeting-text {
+        font-size: 1.7em;
+        text-align: center;
+    }
+    .greeting-text-p {
+        font-size: 1em;
+        line-height: normal;
+        text-align: center;
+    }
+    .greeting-main {
+        display: block;
+    }
+    .greeting-image-div {
+        height: 100%;
+    }
+    .greeting-image-div img {
+        border: 0.15em solid transparent!important;
+    }
+}
+@media (min-width: 1280px) {
+    .greet-main {
+        margin: auto;
+        position: relative;
+        top: 40%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+}
+
+/* ICONS */
+
+.social-media-div {
+    font-size: 2em;
+    margin-top: 1em;
+}
+.icon-button {
+    margin-bottom: 10px;
+}
+.icon-button i {
+    color: #fff;
+    border-radius: 2.6rem;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.3rem;
+    height: 2.6rem;
+    line-height: 2.6rem;
+    position: relative;
+    text-align: center;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 2.6rem;
+    margin: 0 5px 10px;
+    transition: 0.2s ease-in;
+}
+.linkedin i {
+    background-color: #0e76a8;
+}
+.github i {
+    background-color: #333;
+}
+.google i {
+    background-color: #ea4335;
+}
+.twitter i {
+    background-color: #1da1f2;
+}
+.medium i {
+    background-color: #000;
+}
+.mobile i {
+    background-color: #f48024;
+}
+.instagram i {
+    background-color: #c13584;
+}
+.github i:hover,
+.google i:hover,
+.instagram i:hover,
+.linkedin i:hover,
+.medium i:hover,
+.mobile i:hover,
+.twitter i:hover {
+    background-color: #000;
+}
+@media (max-width: 1024px) {
+    .social-media-div {
+        text-align: center;
+    }
+}
+@media (max-width: 850px) {
+    .mobile {
+        display: none;
+    }
+}

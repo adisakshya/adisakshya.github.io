@@ -11,16 +11,15 @@ const adisakshya = {
     '🐱‍🏍 Cloud Computing',
     '🤖 Machine Learning',
   ],
-  profiles: {
-    github:  'https://github.com/adisakshya',
-    linkedIn: 'https://www.linkedin.com/in/adisakshya',
-    twitter: 'https://twitter.com/adisakshya',
-  },
   askMeAbout: ['🌌 Science', '👨🏻‍💻 Technology', '⚽ Football'],
+  profiles: {
+    github:  'github.com/adisakshya',
+    linkedIn: 'linkedin.com/in/adisakshya',
+    twitter: 'twitter.com/adisakshya',
+  },
   links: {
-    webSite: 'https://adisakshya.codes',
-    liveChat: 'https://chat.adisakshya.codes',
-    cv: 'https://cv.adisakshya.codes',
+    webSite: 'adisakshya.codes',
+    cv: 'cv.adisakshya.codes',
   },
   funFact: 'First of his name on Earth',
   quote: 'There is always more to reality than one imagines - Prof. Paradox',

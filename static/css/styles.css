@@ -275,6 +275,9 @@ input:checked + .slider:after {
     margin: 0 5px 10px;
     transition: 0.2s ease-in;
 }
+.mobile i {
+	background-color: 	#6A5ACD;
+}
 .linkedin i {
     background-color: #0e76a8;
 }
@@ -290,7 +293,7 @@ input:checked + .slider:after {
 .medium i {
     background-color: #000;
 }
-.mobile i {
+.blog i {
     background-color: #f48024;
 }
 .instagram i {
@@ -302,6 +305,7 @@ input:checked + .slider:after {
 .linkedin i:hover,
 .medium i:hover,
 .mobile i:hover,
+.blog i:hover,
 .twitter i:hover {
     background-color: #000;
 }
@@ -314,4 +318,14 @@ input:checked + .slider:after {
     .mobile {
         display: none;
     }
+}
+.tooltiptext::after {
+	content: " ";
+	position: absolute;
+	bottom: 100%;  /* At the top of the tooltip */
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent black transparent;
 }

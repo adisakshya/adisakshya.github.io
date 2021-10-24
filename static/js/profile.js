@@ -1,11 +1,12 @@
 const adisakshya = {
   name: 'Adisakshya Chauhan',
-  bio: 'Student Developer',
+  bio: 'Data Engineer',
   pronouns: 'he | his',
   locaion: '28.6245° N, 77.0914° E',
-  currentWorkplace: '👨🏻‍💼 Comming soon...',
+  currentWorkplace: '👨🏻‍💼 ZS',
   digitalBusinessCard: '$ npx adisakshya',
   knowledgeBase: [
+    '📈 Data Engineering',
     '🐱‍💻 Software Engineering & Development',
     '🐱‍👤 DevOps',
     '🐱‍🏍 Cloud Computing',
@@ -21,7 +22,7 @@ const adisakshya = {
     webSite: 'adisakshya.codes',
     cv: 'cv.adisakshya.codes',
   },
-  funFact: 'First of his name on Earth',
+  funFact: 'You can\'t pronounce my name',
   quote: 'There is always more to reality than one imagines - Prof. Paradox',
 }
 

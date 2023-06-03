@@ -19,8 +19,7 @@ const adisakshya = {
     twitter: 'twitter.com/adisakshya',
   },
   links: {
-    webSite: 'adisakshya.codes',
-    cv: 'cv.adisakshya.codes',
+    webSite: 'adisakshya.github.io'
   },
   funFact: 'You can\'t pronounce my name',
   quote: 'There is always more to reality than one imagines - Prof. Paradox',

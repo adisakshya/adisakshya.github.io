@@ -2,7 +2,7 @@ const adisakshya = {
   name: 'Adisakshya Chauhan',
   bio: 'Data Engineer',
   pronouns: 'he | his',
-  locaion: '28.6245° N, 77.0914° E',
+  location: '28.6245° N, 77.0914° E',
   currentWorkplace: '👨🏻‍💼 ZS',
   digitalBusinessCard: '$ npx adisakshya',
   knowledgeBase: [

@@ -433,17 +433,20 @@ main {
   width: 100%;
   max-width: 72rem;
   margin-inline: auto;
+  text-align: center;
 }
 
 .hindi-name {
   display: flex;
   align-items: baseline;
+  justify-content: center;
   gap: 0.25em;
+  width: fit-content;
+  margin: 0 auto 0.3em;
   font-family: "Tiro Devanagari Hindi", "Noto Serif Devanagari", serif;
   font-style: italic;
   font-size: clamp(32px, 4.4cqi, 56px);
   line-height: 1.2;
-  margin: 0 0 0.3em;
 }
 .hindi-name .dot {
   display: inline-block;
@@ -454,14 +457,8 @@ main {
   flex-shrink: 0;
 }
 
-.headline-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  margin: 0 0 0.6em;
-}
 h1 {
-  margin: 0;
+  margin: 0 auto 0.6em;
   max-width: 32ch;
   font-family: "Source Serif 4", Georgia, serif;
   font-weight: 600;
@@ -502,34 +499,12 @@ h1 {
   50% { opacity: 0; }
 }
 
-.pause-btn {
-  flex-shrink: 0;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 1px solid var(--border);
-  background: var(--bg);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  margin-top: 0.15em;
-}
-.pause-btn svg {
-  width: 16px;
-  height: 16px;
-  fill: currentColor;
-}
-.pause-btn[hidden] {
-  display: none;
-}
-
 .supporting {
   max-width: 40rem;
   font-size: 19px;
   line-height: 1.65;
   color: var(--muted);
-  margin: 0 0 1.75em;
+  margin: 0 auto 1.75em;
 }
 
 .pills {
@@ -537,6 +512,7 @@ h1 {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 12px;
   max-width: 46rem;
+  margin-inline: auto;
 }
 .pill {
   display: inline-flex;

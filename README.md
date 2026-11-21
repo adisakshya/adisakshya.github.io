@@ -43,6 +43,6 @@ The homepage has no theme switcher of its own — it inherits whatever theme a r
 
 ## Credits
 
-- **Loader animation** — the "jetpack person" preloader is Mr. Alien's CodePen ["speeder"](https://codepen.io/mr_alien/pen/FDLjg), re-themed with CSS variables. *Licence not yet confirmed for reuse — flagged for owner review.*
+- **Loader animation** — the "jetpack person" preloader is Mr. Alien's CodePen ["speeder"](https://codepen.io/mr_alien/pen/FDLjg), re-themed with CSS variables. Reuse confirmed by the site owner.
 - **Icons** — [Font Awesome 6 Free](https://fontawesome.com) (Brands + Solid), inlined as SVG. Icons are CC BY 4.0; see the [Font Awesome Free licence](https://fontawesome.com/license/free).
-- **Fonts** — Tiro Devanagari Hindi, Source Serif 4 and IBM Plex Sans via Google Fonts (SIL OFL). Agustina is self-hosted from a file already in this repo; *licence for reuse on this site not yet confirmed — flagged for owner review.*
+- **Fonts** — Tiro Devanagari Hindi, Source Serif 4 and IBM Plex Sans via Google Fonts (SIL OFL). Agustina is self-hosted from a file already in this repo; reuse confirmed by the site owner.

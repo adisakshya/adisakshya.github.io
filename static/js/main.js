@@ -119,12 +119,10 @@
   var ERASE_MS = 25;
   var GAP_MS = 450;
   var START_DELAY_MS = 400;
-  var RESUME_DELAY_MS = 600;
 
   function initTypewriter() {
     var liveEl = document.querySelector(".tw-live");
     var cursorEl = document.querySelector(".tw-cursor");
-    var pauseBtn = document.getElementById("pause-btn");
     if (!liveEl) return;
 
     var reduceMotion = window.matchMedia(
@@ -134,23 +132,18 @@
     if (reduceMotion) {
       liveEl.textContent = LINES[0];
       if (cursorEl) cursorEl.hidden = true;
-      if (pauseBtn) pauseBtn.hidden = true;
       return;
     }
 
     var lineIndex = 0;
     var charIndex = 0;
     var phase = "typing"; // typing | holding | erasing | gap
-    var paused = false;
-    var timer = null;
 
     function schedule(fn, ms) {
-      window.clearTimeout(timer);
-      timer = window.setTimeout(fn, ms);
+      window.setTimeout(fn, ms);
     }
 
     function step() {
-      if (paused) return;
       var line = LINES[lineIndex];
       if (phase === "typing") {
         charIndex++;
@@ -179,42 +172,6 @@
         phase = "typing";
         schedule(step, 0);
       }
-    }
-
-    function completeCurrentLine() {
-      window.clearTimeout(timer);
-      var line = LINES[lineIndex];
-      charIndex = line.length;
-      liveEl.textContent = line;
-      phase = "holding";
-    }
-
-    function pause() {
-      if (paused) return;
-      paused = true;
-      completeCurrentLine();
-      if (pauseBtn) {
-        pauseBtn.setAttribute("aria-pressed", "true");
-        pauseBtn.setAttribute("aria-label", "Resume rotating headline");
-      }
-    }
-
-    function resume() {
-      if (!paused) return;
-      paused = false;
-      if (pauseBtn) {
-        pauseBtn.setAttribute("aria-pressed", "false");
-        pauseBtn.setAttribute("aria-label", "Pause rotating headline");
-      }
-      phase = "erasing";
-      schedule(step, RESUME_DELAY_MS);
-    }
-
-    if (pauseBtn) {
-      pauseBtn.addEventListener("click", function () {
-        if (paused) resume();
-        else pause();
-      });
     }
 
     schedule(step, START_DELAY_MS);

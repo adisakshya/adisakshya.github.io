@@ -488,9 +488,15 @@ h1 {
 }
 .tw-cursor {
   display: inline-block;
-  margin-left: 0.04em;
-  color: var(--accent);
+  width: 0.08em;
+  height: 0.9em;
+  margin-left: 0.08em;
+  background: var(--accent);
+  vertical-align: text-bottom;
   animation: tw-blink 1.06s steps(1) infinite;
+}
+.tw-cursor[hidden] {
+  display: none;
 }
 @keyframes tw-blink {
   50% { opacity: 0; }

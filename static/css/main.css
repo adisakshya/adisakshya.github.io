@@ -4,17 +4,6 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   Fonts
-   -------------------------------------------------------------------------- */
-@font-face {
-  font-family: "Agustina";
-  src: local("Agustina"), url("../media/agustina.21f233e1.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* --------------------------------------------------------------------------
    Theme tokens
    Ported from adisakshya/weblog src/styles/journal.css so the homepage
    matches whatever theme a reader already chose on the Web Journal
@@ -391,30 +380,6 @@ button {
 /* --------------------------------------------------------------------------
    Page shell
    -------------------------------------------------------------------------- */
-.site-header {
-  container-type: inline-size;
-  flex: 0 0 auto;
-  width: 100%;
-  min-height: 80px;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid var(--border);
-}
-.site-header-inner {
-  width: 100%;
-  max-width: 72rem;
-  margin-inline: auto;
-  padding: 16px 24px;
-}
-.brand {
-  display: inline-block;
-  font-family: "Agustina", "Herr Von Muellerhoff", cursive;
-  font-size: clamp(30px, 3.4cqi, 40px);
-  line-height: 1;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
 main {
   container-type: inline-size;
   /* flex-basis 0 + grow fills remaining space on screens where the content
@@ -546,7 +511,7 @@ h1 {
   background: #24292f;
   color: #fff;
 }
-.pill-journal {
+.pill-blog {
   background: var(--accent);
   color: var(--accent-fg);
 }

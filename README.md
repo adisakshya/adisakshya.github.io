@@ -6,7 +6,7 @@ Development version of my website is deployed using Netlify and can be found at 
 
 ## What this is
 
-A single, calm, typography-led screen that introduces Adi and points visitors to LinkedIn, GitHub, the [Web Journal](https://adisakshya.github.io/weblog/) and X. No About section, résumé, project gallery, post feed, portrait or contact form — those live elsewhere.
+A single, calm, typography-led screen that introduces Adi and points visitors to LinkedIn, GitHub, the [Blog](https://adisakshya.github.io/weblog/) and X. No header masthead, About section, résumé, project gallery, post feed, portrait or contact form — those live elsewhere (or were redundant with the Hindi-name heading).
 
 ## File map
 
@@ -16,9 +16,9 @@ index.html              The whole page. Head holds the pre-paint theme snippet,
 static/css/main.css      The one stylesheet: theme tokens, the jetpack loader,
                          and the page layout.
 static/js/main.js        The one script: loader lifecycle, the typewriter
-                         headline + pause control, and live system-theme updates.
-static/media/agustina.21f233e1.woff   Self-hosted script font for the header name.
-static/images/favicons/  Favicons (including the apple-touch-icon fix).
+                         headline, and live system-theme updates.
+static/images/favicons/  The आदि brand favicon set, kept in sync with
+                         adisakshya/weblog (same files, same <link> pattern).
 static/images/adisakshya-profile.png  Kept only as the og:image / twitter:image
                          share preview — no longer shown on the page itself.
 robots.txt, sitemap.xml, sitemap.txt  Point at https://adisakshya.github.io/.
@@ -45,4 +45,5 @@ The homepage has no theme switcher of its own — it inherits whatever theme a r
 
 - **Loader animation** — the "jetpack person" preloader is Mr. Alien's CodePen ["speeder"](https://codepen.io/mr_alien/pen/FDLjg), re-themed with CSS variables. Reuse confirmed by the site owner.
 - **Icons** — [Font Awesome 6 Free](https://fontawesome.com) (Brands + Solid), inlined as SVG. Icons are CC BY 4.0; see the [Font Awesome Free licence](https://fontawesome.com/license/free).
-- **Fonts** — Tiro Devanagari Hindi, Source Serif 4 and IBM Plex Sans via Google Fonts (SIL OFL). Agustina is self-hosted from a file already in this repo; reuse confirmed by the site owner.
+- **Fonts** — Tiro Devanagari Hindi, Source Serif 4 and IBM Plex Sans via Google Fonts (SIL OFL).
+- **Favicon** — the आदि brand mark, sourced from `adisakshya/weblog`'s `docs/brand/assets/` (checksums verified against that repo's own `SHA256SUMS`).
